@@ -14,7 +14,7 @@ def leer_dominios(archivo):
         return [line.strip() for line in file.readlines()]
 
 def verificar_dominios(archivo):
-    """ Lee los dominios y verifica cuáles están activos. """
+    """ Lee los dominios y verifica cuáles están activos y cuáles no """
     dominios = leer_dominios(archivo)
     for dominio in dominios:
         if verificar_ping(dominio):
